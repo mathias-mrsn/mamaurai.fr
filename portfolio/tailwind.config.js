@@ -4,6 +4,7 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/layouts/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -12,7 +13,90 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        'inter': ['Inter', 'sans-serif'],
+      },
+      keyframes: {
+        welcome_right_side_rotation: {
+            '0%': {
+                top: '95%',
+            },
+            '20%' : {
+                top: '0%',
+            },
+            '40%': {
+                top: '-90%',
+            },
+            '60%': {
+                top: '95%',
+            },
+            '80%': {
+                top: '95%',
+                opacity: '1',
+            },
+            '95%': {
+                opacity: '0',
+            },
+            '100%': {
+                top: '200%',
+                opacity: '0',
+            },   
+        },
+
+        welcome_left_side_rotation: {
+            '0%': {
+                top: '0%',
+            },
+            '80%': {
+                top: '0%',
+                opacity: '1',
+            },
+            '95%': {
+                opacity: '0',
+            },
+            '100%': {
+                top: '-100%',
+                opacity: '0',
+            }
+        },
+        moving_up: {
+            '85%': {
+                top: '0%',
+            },
+            '100%': {
+                top: '-100%',
+            }
+        },
+        moving_down: {
+            '85%': {
+                top: '0%',
+            },
+            '100%': {
+                top: '100%',
+            }
+        },
+        hide_at_end: {
+            '100%': {
+                display: 'none',
+            }
+
+        }
+
+      },
+      animation: {
+        welcome_right_side_rotation_text: 'welcome_right_side_rotation 4.5s ease-in-out forwards',
+        welcome_left_side_rotation_text: 'welcome_left_side_rotation 4.5s ease-in-out forwards',
+      },
+      screens: {
+        'max-2xl': {'max': '1535px'},
+        'max-xl': {'max': '1279px'},
+        'max-lg': {'max': '1023px'},
+        'max-md': {'max': '767px'},
+        'max-sm': {'max': '639px'},
+      }
+
     },
   },
   plugins: [],
 }
+
