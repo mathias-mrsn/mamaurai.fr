@@ -26,7 +26,7 @@ export const WelcomeAnimation = () => {
                         <div className="h-auto relative flex flex-col gap-4 animate-welcome_right_side_rotation_text justify-center py-2">
                             {jobsArray.map((job, index) => {
                                 return (
-                                    <h1 className="font-inter text-gray-400 text-xl max-sm:text-base relative">
+                                    <h1 className="font-inter text-gray-400 text-xl max-sm:text-base relative" key={index}>
                                         {job}
                                     </h1>
                                 );
