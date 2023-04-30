@@ -9,3 +9,5 @@
 -> Create title and find a way to write something else when I hover the title.
 
 -> Move text when I scroll in the page.
+
+-> Hide cursor for mobile
