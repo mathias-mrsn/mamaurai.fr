@@ -26,7 +26,7 @@ export const Cursor = () => {
             h-12
             rounded-full
             border-2
-            border-white
+            border-yellow-400
             transform
             -translate-x-1/2
             -translate-y-1/2
@@ -34,7 +34,9 @@ export const Cursor = () => {
             ease-out
             duration-300
             z-20
-
+            max-md:hidden
+            pointer-events-none
+            
             "
         />
     </>
