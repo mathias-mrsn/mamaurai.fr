@@ -80,6 +80,7 @@ module.exports = {
         hide_at_end: {
             '100%': {
                 display: 'none',
+                visibility: 'hidden',
             }
 
         },

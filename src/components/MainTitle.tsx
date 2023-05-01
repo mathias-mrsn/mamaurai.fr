@@ -14,10 +14,11 @@ export const MainTitle = () => {
 
     useEffect(() => {
         const text = document.getElementById('last-word-main-title') as HTMLHeadElement;
-        let index : number = 0;
-        let way : boolean = true
+        let way : boolean = false
         let string : string = "reality"
-        let lock: number = 0;
+        let index : number = string.length;
+        let lock: number = 30;
+        text.textContent = string;
         
         const interval = setInterval(() => {
             if (lock !== 0) {
@@ -29,21 +30,25 @@ export const MainTitle = () => {
             } else if (way && index === string.length) {
                 way = false;
                 text.textContent = string;
-                lock = 10;       
+                lock = 15;       
             } else if (!way && index !== 0) {
                 text.textContent = string.slice(0, index--);
             } else if (!way && index === 0) {
                 way = true;
-                string = titlesArray[Math.floor(Math.random() * titlesArray.length)];
+                text.textContent = "";
+                lock = 5;
+                let oldString = string;
+                do {
+                    string = titlesArray[Math.floor(Math.random() * titlesArray.length)];
+                } while (string === oldString)
             }
-            
         }, 200);
         return () => clearInterval(interval);
     }, []);
 
     return (
         <>
-        <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
+        <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center">
             <div className="w-5/6 flex flex-col items-center cursor-default">
             <h3 className="text-white font-inter font-thin tracking-[.25em] text-xs mb-7 ">
                 MATHIAS MAURAISIN DEVELOPPER

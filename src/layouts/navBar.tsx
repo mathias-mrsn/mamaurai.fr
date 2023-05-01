@@ -1,7 +1,7 @@
 const NavBarItems = [
     {
         name: "About",
-        link: "#about"
+        link: "#about_me_section"
     },
     {
         name: "Projects",
@@ -22,7 +22,7 @@ export const NavBar = () => {
                     return (
                     <>
                         <li className="relative h-6 overflow-hidden">
-                            <a className="">
+                            <a href={item.link} className="">
                                 <span className="relative grid w-auto hover:bottom-6 ease-in-out duration-300 h-full">
                                     <span className="font-roboto">{item.name}</span>
                                     <span className="font-roboto text-yellow-400">{item.name}</span>
