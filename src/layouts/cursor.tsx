@@ -21,7 +21,7 @@ export const Cursor = () => {
         <div
             id="cursor-id"
             className="
-            absolute
+            fixed
             w-12
             h-12
             rounded-full
@@ -30,13 +30,11 @@ export const Cursor = () => {
             transform
             -translate-x-1/2
             -translate-y-1/2
-
             ease-out
             duration-300
             z-20
             max-md:hidden
             pointer-events-none
-            
             "
         />
     </>

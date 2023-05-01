@@ -12,13 +12,13 @@ export default function Home() {
   return (
     <>
         {/* <WelcomeAnimation /> */}
+        <Cursor />
         <div className="dark:bg-[#0e0e0e] bg-[#fefefe] absolute top-0 left-0 w-full h-full">
             <NavBar/>
             <MainTitle/>
-            <Cursor />
-            <div className="relative h-full w-full dark:bg-[#1e1e1e] bg-[#eeeeee] top-[100%]">
+            {/* <div className="relative h-full w-full dark:bg-[#1e1e1e] bg-[#eeeeee] top-[100%]">
                 <Description/>
-            </div>
+            </div> */}
 
 
         </div>
