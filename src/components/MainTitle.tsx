@@ -65,7 +65,7 @@ export const MainTitle = () => {
                     id={"last-word-main-title"}
                     >
                 </h1>
-                <div className="relative w-3 h-32 max-sm:text-7xl bg-white animate-cursor"/>
+                <div className="relative w-3 h-32 max-sm:h-[72px] dark:bg-white bg-black animate-cursor"/>
             </div>
             </div>
         </div>

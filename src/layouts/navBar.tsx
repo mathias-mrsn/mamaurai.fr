@@ -24,8 +24,8 @@ export const NavBar = () => {
                         <li className="relative h-6 overflow-hidden">
                             <a href={item.link} className="">
                                 <span className="relative grid w-auto hover:bottom-6 ease-in-out duration-300 h-full">
-                                    <span className="font-roboto">{item.name}</span>
-                                    <span className="font-roboto text-yellow-400">{item.name}</span>
+                                    <span className="font-roboto font-bold">{item.name}</span>
+                                    <span className="font-roboto text-yellow-400 font-bold">{item.name}</span>
                                 </span>
                             </a>
                         </li>
