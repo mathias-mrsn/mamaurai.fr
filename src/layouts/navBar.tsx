@@ -21,11 +21,11 @@ export const NavBar = () => {
                 { NavBarItems.map((item, index) => {
                     return (
                     <>
-                        <li className="relative h-6 overflow-hidden">
+                        <li className="relative h-20 overflow-hidden">
                             <a href={item.link} className="">
-                                <span className="relative grid w-auto hover:bottom-6 ease-in-out duration-300 h-full">
-                                    <span className="font-roboto font-bold">{item.name}</span>
-                                    <span className="font-roboto text-yellow-400 font-bold">{item.name}</span>
+                                <span className="relative grid w-auto hover:bottom-6 bottom-0 transition ease-in h-full">
+                                    <span className="font-playfair  font-bold  tracking-wider">{item.name}</span>
+                                    <span className="font-playfair text-yellow-400 font-bold tracking-wider">{item.name}</span>
                                 </span>
                             </a>
                         </li>

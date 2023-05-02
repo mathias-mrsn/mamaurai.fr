@@ -1,4 +1,8 @@
+import { useEffect } from "react"
+
 export const Description = () => {
+
+
     return (
     <>
         <div id="about_me_section" className="flex flex-col w-4/6 my-24 h-auto">
@@ -7,9 +11,9 @@ export const Description = () => {
                     className="text-black dark:text-white font-inter font-thin tracking-[.25em] text-xs mb-7"
                 >ABOUT ME</h3>
                 <h2
-                    className="text-black dark:text-white font-mono font-bold tracking-[.25em] text-xl"
+                    className="text-black dark:text-white font-inter font-bold tracking-[.2em] text-3xl"
                 >
-                    I'm a french student in computer science, I'm 20 years old and I'm currently in my second year of DUT (Diplôme Universitaire de Technologie) in computer science at the IUT of Lannion.
+                   "I'm a french developper with many skills in web developpement. I am strong focus of high quality code and communication with my clients."
                 </h2>
             </div>
             
