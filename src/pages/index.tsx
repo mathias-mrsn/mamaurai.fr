@@ -15,32 +15,28 @@ export default function Home() {
     return (
     <>
         <Cursor />
-        <Projects/>
+        {/* <Projects/> */}
+        <WelcomeAnimation />
+        <div
+        className="dark:bg-[#0e0e0e] bg-[#fefefe] absolute top-0 left-0 w-full h-full"
+        >
+            <NavBar/>
+            <MainTitle/>
+            <div className="relative w-full dark:bg-[#1e1e1e] bg-[#eeeeee] top-[100%] flex justify-center panel">
+                <Description/>
+            </div>
+            <div className="panel">
+                <p>feuiafnciauondiunceeiuncuinuidoohvnuiahvncuiensicoeniocnao</p>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+        </div>
       
     </>
   );
 }
 
-
-/*
-
-<WelcomeAnimation />
-<div
-className="dark:bg-[#0e0e0e] bg-[#fefefe] absolute top-0 left-0 w-full h-full"
->
-    <NavBar/>
-    <MainTitle/>
-    <div className="relative w-full dark:bg-[#1e1e1e] bg-[#eeeeee] top-[100%] flex justify-center panel">
-        <Description/>
-    </div>
-    <div className="panel">
-        <p>feuiafnciauondiunceeiuncuinuidoohvnuiahvncuiensicoeniocnao</p>
-    </div>
-    <div>
-    </div>
-    <div>
-    </div>
-    <div>
-    </div>
-</div>
-*/
