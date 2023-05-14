@@ -59,7 +59,7 @@ export const MainTitle = () => {
                 onMouseEnter={HoverText}
                 onMouseLeave={Unhover}    
             >
-                <h3 className="text-white font-inter font-thin tracking-[.25em] text-xs mb-7 ">
+                <h3 className="dark:text-white text-black font-inter font-thin tracking-[.25em] text-xs mb-7 ">
                     MATHIAS MAURAISIN DEVELOPPER
                 </h3>
                 <h1 className={titlesClassName}>Turn</h1>
