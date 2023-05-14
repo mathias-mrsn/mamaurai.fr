@@ -17,6 +17,7 @@ module.exports = {
         'inter': ['Inter', 'sans-serif'],
         'playfair': ['Playfair Display', 'serif'],
         'roboto': ['Roboto', 'sans-serif'],
+        'neue': ['Neue Haas Grotesk', 'sans-serif'],
       },
       keyframes: {
         welcome_right_side_rotation: {
@@ -106,10 +107,6 @@ module.exports = {
             '75%, 80%': { content: '60%' },
             '85%, 90%': { content: '80%' },
             '95%, 100%': { content: 'auto' },
-
-
-
-            
           },
           cursor: {
             '0%': { opacity: '0' },

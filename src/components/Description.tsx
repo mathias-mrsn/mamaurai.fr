@@ -13,7 +13,7 @@ export const Description = () => {
                 <h2
                     className="text-black dark:text-white font-inter font-bold tracking-[.2em] text-3xl"
                 >
-                   "I'm a french developper with many skills in web developpement. I am strong focus of high quality code and communication with my clients."
+                   "I'm a french developper with many skills in web developpement. I am strongly focus of high quality code and communication with my clients."
                 </h2>
             </div>
             

@@ -11,7 +11,7 @@ const jobsArray: string[] = [
 export const WelcomeAnimation = () => {
     return (
     <>
-        <div className="fixed top-0 left-0 w-full h-full flex flex-row z-30 animate-[hide\_at\_end_5.5s_linear_forwards]">
+        <div className="fixed top-0 left-0 w-full h-full flex flex-row z-30 animate-[hide\_at\_end_5.5s_linear_forwards] cursor-none">
             <div className="w-1/2 h-full flex">
                 <div className="relative h-full lg:w-1/2 w-0 bg-gray-50 dark:bg-zinc-900 border-r border-gray-500 animate-[moving\_up_5.7s_ease-in-out_forwards] max-lg:hidden"/>
                 <div className="relative h-full lg:w-1/2 w-full bg-gray-50 dark:bg-zinc-900 flex justify-end items-center text-right animate-[moving\_up_5.4s_ease-in-out_forwards] border-r border-gray-500">
