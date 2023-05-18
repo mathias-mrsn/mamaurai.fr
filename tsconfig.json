@@ -18,7 +18,8 @@
       "@/*": ["./src/*"],
       "@layouts/*": ["./src/layouts/*"],
       "@components/*": ["./src/components/*"],
-      "@lib": ["./src/lib/*"]
+      "@lib": ["./src/lib/*"],
+      "@data": ["./src/data/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

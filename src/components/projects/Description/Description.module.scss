@@ -1,0 +1,66 @@
+.project_description_container {
+
+    position: fixed;
+    top: 35%;
+    left: 60%;
+    width: 300px;
+    height: auto;
+    letter-spacing: 0.15em;
+    // transform: translateY(-50%);
+
+    // Not sure of this part
+    background: #000;
+    padding: 25px;
+    border: #ffffff 1px solid;
+    z-index: 9999;
+
+
+    .date_box {
+        font-family: Playfair Display, serif;
+        font-size: 22px;
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        text-transform: uppercase;
+
+        align-items: center;
+
+        .cercle {
+            position: relative;
+            width: 0.5rem;
+            height: 0.5rem;
+            margin-right: 0.3rem;
+            background-color: rgb(232, 232, 232);
+            border-radius: 1000px;
+        }
+        translate: transformY(-10%);
+    }
+
+    .topics_box {
+        display: flex;
+        flex-direction: column;
+        margin-top: 16px;
+        gap: 0.7rem;
+        font-family: Roboto, sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: rgb(197, 197, 197);
+    }
+
+    span {
+        translate: transformY(-10%);
+    }
+
+    &:active {
+        @for $i from 0 to 10 {
+            span {
+                animation: moving_up 1.5s ease-in-out infinite;
+                animation-delay: $i * 0.1s;
+            }
+        }
+    }
+
+    
+    
+
+}

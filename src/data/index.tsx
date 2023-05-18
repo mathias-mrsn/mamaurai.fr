@@ -1,0 +1,18 @@
+export const defaultProjectsList: string[] = [
+    "Inception",
+    "rainfall",
+    "snowcrash",
+    "webserv",
+    "Inception",
+    "Inception",
+    "Inception",
+    "Inception",
+    "Inception",
+    "Inception",
+    "Inception",
+    "Inception",
+    "Inception",
+    "Inception",
+    "Inception",
+    "Inception",
+]
