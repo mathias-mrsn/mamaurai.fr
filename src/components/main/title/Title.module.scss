@@ -1,0 +1,17 @@
+.container {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .letter {
+            font-size: 240px;
+            height: 240px;
+        }
+    }
+}

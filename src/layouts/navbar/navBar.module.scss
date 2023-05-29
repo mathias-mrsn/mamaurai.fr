@@ -1,0 +1,43 @@
+.container {
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 9999;
+
+    .logo {
+        width: 45px;
+        height: 45px;
+        position: relative;
+        margin-left: 5%;
+    }
+
+    .navbar {
+        position: relative;
+        margin-right: 5%;
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+        gap: 150px;
+
+        li {
+            list-style: none;
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 23px;
+            text-align: center;
+            letter-spacing: 0.17em;
+            text-transform: uppercase;
+            cursor: pointer;
+
+            
+        }
+    }
+}

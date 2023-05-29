@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Item from '@/components/projects/Item';
-import {defaultProjectsList} from '@/data';
+// import {defaultProjectsList} from '@/data';
 
 interface IProjectsProps {
 
@@ -8,7 +8,7 @@ interface IProjectsProps {
 
 const Projects = (props : IProjectsProps) => {
 
-    const [projects, setProjects] = React.useState<string[]>(defaultProjectsList);
+    const [projects, setProjects] = React.useState<string[]>([]);
 
     useEffect(() => {
         fetch(`https://api.github.com/users/mathias-mrsn/repos?sort=created`, {

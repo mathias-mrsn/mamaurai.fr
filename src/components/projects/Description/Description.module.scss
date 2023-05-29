@@ -3,7 +3,7 @@
     position: fixed;
     top: 35%;
     left: 60%;
-    width: 300px;
+    width: 350px;
     height: auto;
     letter-spacing: 0.15em;
     // transform: translateY(-50%);
@@ -22,13 +22,14 @@
         flex-direction: row;
         gap: 0.5rem;
         text-transform: uppercase;
+        letter-spacing: 0.2em;
 
         align-items: center;
 
         .cercle {
             position: relative;
-            width: 0.5rem;
-            height: 0.5rem;
+            width: 10px;
+            height: 10px;
             margin-right: 0.3rem;
             background-color: rgb(232, 232, 232);
             border-radius: 1000px;

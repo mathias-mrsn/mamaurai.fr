@@ -42,7 +42,7 @@ const Description = (props : IDescriptionProps) => {
             const now = new Date();
             const commit = new Date(data[0].commit.author.date);
             if (commit.getMonth() == now.getMonth() && commit.getFullYear() == now.getFullYear()) {
-                setDate("Still workint on it")
+                setDate("Still working on it")
             } else {
                 setDate(monthNames[commit.getMonth()] + " " + commit.getFullYear());
             }
