@@ -9,7 +9,7 @@ interface IMaskProps {
 
 const Mask = (props : IMaskProps) => {
 
-    const {values, setValues}: any = React.useContext(CursorContext);
+    const {values}: any = React.useContext(CursorContext);
     const position = useMousePosition();
 
     return (
@@ -17,8 +17,8 @@ const Mask = (props : IMaskProps) => {
         <div
             className={styles.container}
             style={{
-                maskPosition: `${position.x - (values.size / 2)}px ${position.y - (values.size / 2)}px`,
-                WebkitMaskPosition: `${position.x - (values.size / 2)}px ${position.y - (values.size / 2)}px`,
+                maskPosition: `${(position.FixedX + position.OffsetX) - (values.size / 2)}px ${(position.FixedY + position.OffsetY) - (values.size / 2)}px`,
+                WebkitMaskPosition: `${(position.FixedX  + position.OffsetX) - (values.size / 2)}px ${(position.FixedY + position.OffsetY) - (values.size / 2)}px`,
                 maskSize: `${values.size}px`,
                 WebkitMaskSize: `${values.size}px`,
             }}

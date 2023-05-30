@@ -1,4 +1,5 @@
 import animate from '@/functions/animate';
+import { gsap } from 'gsap';
 import React from 'react';
 import { createContext } from "react";
 
@@ -7,60 +8,56 @@ export const CursorContext = createContext({});
 export const CursorStateContext = (props : any) => {
 
     const [values, setValues] = React.useState({
-        size: 400,
+        size: 40,
         fill: true,
     });
 
     const HoverText = () => {
-        animate({
-            fromValue: values.size,
-            toValue: 400,
-            onUpdate: (newValue, callback) => {
-                setValues({size: newValue, fill: true});
-                callback;
+        gsap.to(values, {
+            size: 400,
+            onUpdate: () => {
+                setValues({size: values.size, fill: true});
             },
-            onComplete: () => {},
-            duration: 200,
-            easeMethod: 'linear'
-        })
+            duration: 0.2,
+            ease: 'linear'
+        }
+        )
     }
     
     const Unhover = () => {
-        animate({
-            fromValue: values.size,
-            toValue: 40,
-            onUpdate: (newValue, callback) => {
-                setValues({size: newValue, fill: true});
-                callback;
+        gsap.to(values, {
+            size: 40,
+            onUpdate: () => {
+                setValues({size: values.size, fill: true});
             },
-            onComplete: () => {},
-            duration: 200,
-            easeMethod: 'linear'
+            duration: 0.2,
+            ease: 'linear'
+        }
+        )
+    };
+
+    const Hide = () => {
+        gsap.to(values, {
+        size: 0,
+        onUpdate: () => {
+            setValues({size: values.size, fill: true});
+        },
+        duration: 0.2,
+        ease: 'linear'
         })
     };
-    const Hide = () => {animate({
-        fromValue: values.size,
-        toValue: 0,
-        onUpdate: (newValue, callback) => {
-            setValues({size: newValue, fill: true});
-            callback;
-        },
-        onComplete: () => {},
-        duration: 800,
-        easeMethod: 'linear'
-    })};
 
-    const HoverButton = () => {animate({
-            fromValue: values.size,
-            toValue: 100,
-            onUpdate: (newValue, callback) => {
-                setValues({size: newValue, fill: true});
-                callback;
+    const HoverButton = () => {
+        gsap.to(values, {
+            size: 100,
+            onUpdate: () => {
+                setValues({size: values.size, fill: true});
             },
-            onComplete: () => {},
-            duration: 200,
-            easeMethod: 'linear'
-        })};
+            duration: 0.2,
+            ease: 'linear'
+        }
+        )
+    };
 
     return (
     <>

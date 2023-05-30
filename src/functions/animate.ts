@@ -16,7 +16,10 @@ function getValue (
 ) {
     if (elapsed > duration) return end;
 
-    return start = (end - start) * easing[easeMethod](elapsed / duration);
+    if (start < end)
+        return start = (end - start) * easing[easeMethod](elapsed / duration);
+    else
+        return start = (start - end) * easing[easeMethod](elapsed / duration);
 }
 
 export default function animate (_ :{
