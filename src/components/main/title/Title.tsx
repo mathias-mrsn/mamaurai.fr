@@ -1,27 +1,38 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import styles from './Title.module.scss';
+import { CursorContext } from '@/context/cursorState';
 
 interface ITitleProps {
-
+    color: string;
+    title: string;
 }
 
 const Title = (props : ITitleProps) => {
-    const title: string[][] = [
-        ['H', 'I', '.'],
-        ['R','E','A','D','Y'],
-        ['T','O'],
-        ['W','O', 'R', 'K', "."],
-    ];
+    const title: string[] = props.title.split(" ");
+    const {values, HoverText, Unhover}: any = useContext(CursorContext);
 
     return (
     <>
-        <div className={styles.container}>
+        <div
+            className={styles.container}
+            onMouseEnter={HoverText}
+            onMouseLeave={Unhover}
+        >
             {title.map((row, i) => {
                 return (
-                <div key={i} className={styles.row}>
-                    {row.map((letter, j) => {
+                <div
+                    key={i}
+                    className={styles.row}
+                    >
+                    {row.split("").map((letter, j) => {
                         return (
-                            <span key={j} className={styles.letter}>
+                            <span
+                            key={j}
+                            className={styles.letter}
+                            style={{
+                                color: props.color,
+                            }}
+                            >
                                 {letter}
                             </span>
                     )})}

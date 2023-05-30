@@ -9,12 +9,14 @@
     flex-direction: row;
     align-items: center;
     z-index: 9999;
+    pointer-events: none;
 
     .logo {
-        width: 45px;
-        height: 45px;
+        width: 35px;
+        height: 35px;
         position: relative;
         margin-left: 5%;
+        pointer-events: all;
     }
 
     .navbar {
@@ -23,19 +25,19 @@
         margin-left: auto;
         display: flex;
         flex-direction: row;
-        gap: 150px;
+        gap: 100px;
 
         li {
             list-style: none;
             font-family: 'Roboto', sans-serif;
             font-style: normal;
-            font-weight: 300;
-            font-size: 20px;
-            line-height: 23px;
+            font-weight: 100;
+            font-size: 14px;
             text-align: center;
             letter-spacing: 0.17em;
             text-transform: uppercase;
             cursor: pointer;
+            pointer-events: all;
 
             
         }

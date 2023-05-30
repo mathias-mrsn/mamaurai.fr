@@ -1,4 +1,4 @@
-import { Cursor } from '@/layouts/cursor'
+import {CursorStateContext} from '@/context/cursorState'
 import { WelcomeAnimation } from '@/layouts/welcomeAnimation'
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
@@ -13,10 +13,10 @@ export default function App({ Component, pageProps }: AppProps) {
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"/>
         <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"  rel="stylesheet"/>
         </Head>
-        {/* <WelcomeAnimation /> TODO: Uncomment this */}
-        {/* <Cursor> */}
+        {/* <WelcomeAnimation /> */}
+        <CursorStateContext>
             <Component {...pageProps} />
-        {/* </Cursor> */}
+        </CursorStateContext>
     </>
     )
 }

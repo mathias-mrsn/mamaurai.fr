@@ -1,17 +1,16 @@
 .container {
-    height: 600px;
+    height: auto;
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    cursor: default;
 
     .row {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+        display: block;
 
         .letter {
+            height: 100%;
             font-size: 240px;
-            height: 240px;
+            text-transform: uppercase;
         }
     }
 }
