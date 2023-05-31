@@ -12,11 +12,14 @@
     pointer-events: none;
 
     .logo {
-        width: 35px;
-        height: 35px;
+        width: 75px;
+        height: 75px;
         position: relative;
         margin-left: 5%;
         pointer-events: all;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .navbar {

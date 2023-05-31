@@ -11,6 +11,9 @@
             height: 100%;
             font-size: 240px;
             text-transform: uppercase;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
     }
 }

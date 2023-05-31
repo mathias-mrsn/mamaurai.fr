@@ -9,14 +9,14 @@ export const CursorStateContext = (props : any) => {
 
     const [values, setValues] = React.useState({
         size: 40,
-        fill: true,
+        full: false,
     });
 
     const HoverText = () => {
         gsap.to(values, {
             size: 400,
             onUpdate: () => {
-                setValues({size: values.size, fill: true});
+                setValues({size: values.size, full: true});
             },
             duration: 0.2,
             ease: 'linear'
@@ -28,7 +28,7 @@ export const CursorStateContext = (props : any) => {
         gsap.to(values, {
             size: 40,
             onUpdate: () => {
-                setValues({size: values.size, fill: true});
+                setValues({size: values.size, full: false});
             },
             duration: 0.2,
             ease: 'linear'
@@ -40,7 +40,7 @@ export const CursorStateContext = (props : any) => {
         gsap.to(values, {
         size: 0,
         onUpdate: () => {
-            setValues({size: values.size, fill: true});
+            setValues({size: values.size, full: false});
         },
         duration: 0.2,
         ease: 'linear'
@@ -51,7 +51,7 @@ export const CursorStateContext = (props : any) => {
         gsap.to(values, {
             size: 100,
             onUpdate: () => {
-                setValues({size: values.size, fill: true});
+                setValues({size: values.size, full: false});
             },
             duration: 0.2,
             ease: 'linear'
