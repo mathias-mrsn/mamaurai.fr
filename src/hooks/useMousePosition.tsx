@@ -35,12 +35,13 @@ const useMousePosition = () => {
         const updateScrollPosition = () => {
             setMousePosition({...mousePosition, OffsetX: window.scrollX, OffsetY: window.scrollY});
         };
-        // // clientY + window.scrollY
 
+        console.debug("useMousePosition: add event listeners")
         window.addEventListener("mousemove", updateMousePosition);
         window.addEventListener("scroll", updateScrollPosition);
         
         return () => {
+            console.debug("useMousePosition: remove event listeners")
             window.removeEventListener("mousemove", updateMousePosition);
             window.removeEventListener("scroll", updateScrollPosition);
         };

@@ -9,8 +9,8 @@ import React from 'react';
 export const NavBar = () => {
 
     const {Hide, Unhover}: any = useContext(CursorContext);
-    const position = useMousePosition();
     const LogoRef = React.useRef<HTMLDivElement>(null);
+    const position = useMousePosition();
     const [isHover, setIsHover] = React.useState<{
         x: number,
         y: number,
@@ -19,18 +19,21 @@ export const NavBar = () => {
         y: 0,
     });
 
-    const handleHover = () => {
+    const handleMouve = (e: React.MouseEvent<HTMLDivElement>) => {
+        if (!LogoRef.current) return;
         setIsHover({
-            x: position.FixedX - LogoRef?.current?.offsetLeft / 2,
-            y: position.FixedY - LogoRef?.current?.offsetTop / 2,
-        })
+            x: e.clientX - LogoRef.current?.offsetLeft,
+            y: e.clientY - LogoRef.current?.offsetTop,
+        });
+
+        console.log(LogoRef.current?.offsetLeft, "  ", LogoRef.current?.offsetTop);
     }
 
-    const handleUnhover = () => {
+    const handleMouseLeave = () => {
         setIsHover({
             x: 0,
             y: 0,
-        })
+        });
     }
 
     return (
@@ -38,19 +41,17 @@ export const NavBar = () => {
         <div className={styles.container}>
             <div
                 className={styles.logo}
-                onMouseEnter={handleHover}
-                onMouseLeave={handleUnhover}
+                onMouseMove={handleMouve}
+                onMouseLeave={handleMouseLeave}
+                ref={LogoRef}
             >
                 <Image
                     src="main_logo.svg"
                     alt="mamaurai.fr"
                     width={35}
                     height={35}
-                    ref={LogoRef}
                     style={{
-                        position: 'absolute',
-                        top: `${isHover.y}px`,
-                        left: `${isHover.x}px`,
+                        transform: `translate(${isHover.x }px, ${isHover.y}px)`,
                     }}
                 />
             </div>
