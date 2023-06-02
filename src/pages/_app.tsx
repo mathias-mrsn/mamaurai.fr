@@ -7,7 +7,7 @@ import Head from 'next/head'
 export default function App({ Component, pageProps }: AppProps) {
     return (
     <>
-        {/* <WelcomeAnimation /> */}
+        <WelcomeAnimation />
         <CursorStateContext>
             <Component {...pageProps} />
         </CursorStateContext>

@@ -1,11 +1,14 @@
 .container {
+    position: relative;
     height: auto;
     display: flex;
     flex-direction: column;
     cursor: default;
+    width: fit-content;
 
     .row {
         display: block;
+        width: fit-content;
 
         .letter {
             height: 100%;

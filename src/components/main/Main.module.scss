@@ -1,16 +1,14 @@
 .container {
     position: absolute;
     width: 100%;
-    height: 170%;
+    height: auto;
     background-color: #000000;
-
-    // overflow: hidden;
     z-index: 1;
 }
 
 .title, .title_on_hover {
-    position: absolute;
-    width: auto;
+    position: relative;
+    width: fit-content;
     height: 100%;
     margin-left: 15%;
     margin-top: 10%;
@@ -32,7 +30,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 170%;
+    height: auto;
     background-color: #FACC15;
     z-index: -1;
 }
