@@ -60,7 +60,7 @@ export const NavBar = () => {
                 onMouseLeave={handleMouseLeave}
                 ref={LogoRef}
             >
-                <Image
+                <img
                     src={isHover.hover ? '/logo-hover.svg' : '/logo.svg'}
                     alt="mamaurai.fr"
                     width={35}
