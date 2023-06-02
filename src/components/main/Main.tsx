@@ -32,7 +32,7 @@ const Main = (props : IMainProps) => {
                     <div className={styles.title_on_hover}>
                         <Title
                             color={'#000000'}
-                            title="hi. ready to work."
+                            title="hi. ready to code."
                         />
                     </div>
                 </div>

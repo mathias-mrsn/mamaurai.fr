@@ -9,19 +9,20 @@ interface IScrollIconProps {
 
 const ScrollIcon = (props : IScrollIconProps) => {
 
-    const containerRef = React.useRef<HTMLDivElement>(null);
+    const textRef = React.useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 0) {
+            console.log(window.scrollY)
+            if (window.scrollY > 400) {
                 console.log('scroll')
-                gsap.to(containerRef.current, {
+                gsap.to(textRef.current, {
                     top: '-100%',
                     duration: 0.4,
                     ease: 'linear'
                 })
             } else {
-                gsap.to(containerRef.current, {
+                gsap.to(textRef.current, {
                     top: '0%',
                     duration: 0.4,
                     ease: 'linear'
@@ -33,14 +34,16 @@ const ScrollIcon = (props : IScrollIconProps) => {
         return () => {
             window.removeEventListener('scroll', handleScroll);
         }
-
-    }, [])
+    }, []);
 
     return (
     <>
-        <div ref={containerRef} className={styles.container}>
+        <div
+            className={styles.container}
+            >
             <span
                 className={styles.scroll_text}
+                ref={textRef}
                 style={{
                     
                 }}

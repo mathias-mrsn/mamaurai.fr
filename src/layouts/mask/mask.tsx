@@ -22,6 +22,7 @@ const Mask = (props : IMaskProps) => {
                 maskSize: `${values.size}px`,
                 WebkitMaskSize: `${values.size}px`,
                 maskImage: `${values.full === false ? 'url(/cercle_hole_mask.svg)' : 'url(/cercle-mask.svg)'}`,
+                WebkitMaskImage: `${values.full === false ? 'url(/cercle_hole_mask.svg)' : 'url(/cercle-mask.svg)'}`,
             }}
         >
         {props.children}

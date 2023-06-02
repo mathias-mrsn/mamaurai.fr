@@ -5,35 +5,50 @@ import Image from 'next/image';
 import { useContext } from 'react';
 import useMousePosition from '@/hooks/useMousePosition';
 import React from 'react';
+import gsap from 'gsap';
+import NavBarItem from './navBarItem/navBarItem';
 
 export const NavBar = () => {
 
-    const {Hide, Unhover}: any = useContext(CursorContext);
+    const {HoverButton, Hide, Unhover}: any = useContext(CursorContext);
     const LogoRef = React.useRef<HTMLDivElement>(null);
-    const position = useMousePosition();
     const [isHover, setIsHover] = React.useState<{
         x: number,
         y: number,
+        hover: boolean
     }>({
         x: 0,
         y: 0,
+        hover: false
     });
 
     const handleMouve = (e: React.MouseEvent<HTMLDivElement>) => {
         if (!LogoRef.current) return;
-        setIsHover({
-            x: e.clientX - LogoRef.current?.offsetLeft,
-            y: e.clientY - LogoRef.current?.offsetTop,
-        });
+        HoverButton();
+        gsap.to(isHover, {
+            x: e.clientX - (LogoRef.current?.offsetLeft + LogoRef.current?.offsetWidth / 2),
+            y: e.clientY - (LogoRef.current?.offsetTop + LogoRef.current?.offsetHeight),
+            onUpdate: () => {
+                setIsHover({x: isHover.x, y: isHover.y, hover: true});
+            },
+            duration: 0.4,
+            ease: 'easeIn'
+        })
 
-        console.log(LogoRef.current?.offsetLeft, "  ", LogoRef.current?.offsetTop);
+
     }
 
     const handleMouseLeave = () => {
-        setIsHover({
+        Unhover();
+        gsap.to(isHover, {
             x: 0,
             y: 0,
-        });
+            onUpdate: () => {
+                setIsHover({x: isHover.x, y: isHover.y, hover: false});
+            },
+            duration: 0.4,
+            ease: 'easeIn'
+        })
     }
 
     return (
@@ -46,27 +61,27 @@ export const NavBar = () => {
                 ref={LogoRef}
             >
                 <Image
-                    src="main_logo.svg"
+                    src={isHover.hover ? '/logo-hover.svg' : '/logo.svg'}
                     alt="mamaurai.fr"
                     width={35}
                     height={35}
                     style={{
                         transform: `translate(${isHover.x }px, ${isHover.y}px)`,
+                        pointerEvents: 'none',
+                        fill: '#f8908f',
                     }}
                 />
             </div>
             <div className={styles.navbar}>
                 {NavBarItems.map((item, index) => {
                     return (
-                        <li
+                        <NavBarItem
                             key={index}
-                            onMouseEnter={Hide}
-                            onMouseLeave={Unhover}
-                        >
-                            <a href={item.link}>
-                                {item.name}
-                            </a>
-                        </li>
+                            title={item.name}
+                            link={item.link}
+                            onHover={Hide}
+                            onUnhover={Unhover}
+                        />
                     )
                 })}
             </div>

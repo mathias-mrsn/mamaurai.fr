@@ -2,19 +2,26 @@
 {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    overflow: hidden;
 }
 
 .scroll_text
 {
     position: relative;
     text-align: center;
-    margin-bottom: 20px;
     width: 100%;
+    top: 0%;
     font-size: 18px;
     color: #8f8f8f;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+
 }

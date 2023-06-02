@@ -51,7 +51,7 @@ export const CursorStateContext = (props : any) => {
         gsap.to(values, {
             size: 100,
             onUpdate: () => {
-                setValues({size: values.size, full: false});
+                setValues({size: values.size, full: true});
             },
             duration: 0.2,
             ease: 'linear'
