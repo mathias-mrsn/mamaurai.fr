@@ -1,0 +1,34 @@
+.container {
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 10%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 100;
+    pointer-events: none;
+
+    .logo {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        border-radius: 9999px;
+        margin-left: 5%;
+        pointer-events: all;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar {
+        position: relative;
+        margin-right: 5%;
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+        gap: 100px;
+    }
+}

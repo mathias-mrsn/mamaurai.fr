@@ -1,0 +1,45 @@
+.title_container {
+    font-family: Playfair Display, serif;
+    font-size: 8vw;
+    text-transform: lowercase;
+    z-index: 1000;
+    letter-spacing: 0.15em;
+    position: relative;
+    
+    .clone {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: rgb(235, 235, 235);
+        clip-path: inset(0 100% 0 0);
+        transition: all 0.3s cubic-bezier(0.5, 0.05, 0.55, 0.06);            
+    }
+
+    :not(.clone) {
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.45);
+        color: transparent;
+
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        .clone {
+            clip-path: inset(0 0 0 0);
+        }
+
+        
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .title_container {
+        .clone {
+            color: rgb(15, 15, 15);
+        }
+
+        :not(.clone) {
+            -webkit-text-stroke: 1px rgba(0, 0, 0, 0.75);
+        }
+    }
+}

@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -14,10 +15,11 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       fontFamily: {
-        'inter': ['Inter', 'sans-serif'],
-        'playfair': ['Playfair Display', 'serif'],
-        'roboto': ['Roboto', 'sans-serif'],
-        'neue': ['Neue Haas Grotesk', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+        playfair: ['Playfair Display', 'serif'],
+        roboto: ['Roboto', 'sans-serif'],
+        neue: ['Neue Haas Grotesk', 'sans-serif'],
+        grotesk: ['Space Grotesk', 'sans-serif'],
       },
       keyframes: {
         welcome_right_side_rotation: {

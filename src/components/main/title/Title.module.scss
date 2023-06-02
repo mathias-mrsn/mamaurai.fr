@@ -1,0 +1,22 @@
+.container {
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+    width: fit-content;
+
+    .row {
+        display: block;
+        width: fit-content;
+
+        .letter {
+            height: 100%;
+            font-size: 240px;
+            text-transform: uppercase;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    }
+}

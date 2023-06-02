@@ -1,15 +1,16 @@
-import { Cursor } from '@/layouts/cursor'
+import {CursorStateContext} from '@/context/cursorState'
 import { WelcomeAnimation } from '@/layouts/welcomeAnimation'
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
+import Head from 'next/head'
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
     <>
         <WelcomeAnimation />
-        <Cursor>
+        <CursorStateContext>
             <Component {...pageProps} />
-        </Cursor>
+        </CursorStateContext>
     </>
     )
 }

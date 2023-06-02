@@ -1,0 +1,36 @@
+.container {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background-color: #000000;
+    z-index: 1;
+}
+
+.title, .title_on_hover {
+    position: relative;
+    width: fit-content;
+    height: 100%;
+    margin-left: 15%;
+    margin-top: 10%;
+}
+
+.scroll
+{
+    z-index: 500;
+    position: fixed;
+    left: 70%;
+    bottom: 70px;
+    width: 200px;
+    height: 20px;
+}
+
+.on_hover
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: #FACC15;
+    z-index: -1;
+}
